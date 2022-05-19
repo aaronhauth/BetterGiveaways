@@ -1,7 +1,7 @@
 import React from 'react'
 import Authentication from '../../util/Authentication/Authentication'
 
-import './Config.css'
+import './Config.scss'
 
 export default class ConfigPage extends React.Component{
     constructor(props){
@@ -48,10 +48,9 @@ export default class ConfigPage extends React.Component{
     render(){
         if(this.state.finishedLoading && this.Authentication.isModerator()){
             return(
-                <div className="Config">
-                    <div className={this.state.theme==='light' ? 'Config-light' : 'Config-dark'}>
-                        There is no configuration needed for this extension!
-                    </div>
+                <div className={`container ${this.state.theme === 'light' ? 'light' : 'dark'}`}>
+                    There is no configuration needed for this extension!
+
                 </div>
             )
         }

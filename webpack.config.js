@@ -116,6 +116,7 @@ module.exports = (_env,argv)=> {
       port: 8080
     }
     config.devServer.https = true
+    config.devtool = 'eval-source-map'
   }
   if(argv.mode==='production'){
     config.optimization.splitChunks={

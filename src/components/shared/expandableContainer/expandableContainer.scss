@@ -1,0 +1,80 @@
+@import '../shared.scss';
+
+
+.winnerSection {
+    
+    border-radius: 7px;
+    overflow: hidden;
+    height: 1.5rem;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: calc(100vw - 20px);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 0 5px;
+    overflow-y: auto;
+    width: 90%; 
+
+    &.expanded {
+        padding-top: 13px;
+        // align-content: center;
+        flex-direction: column;
+        height: auto;
+        max-height: 20rem;
+    }
+
+    .label {
+        text-align: center;
+    }
+
+    &.dark {
+        background-color: lighten($darkModeBgColor, 10%);
+    }
+
+    &.light {
+        background-color: darken($lightModeBgColor, 5%);
+    }
+}
+
+
+
+.expandableList {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height:100%;
+
+    &.expanded {
+        gap: 5px 5px;
+    }
+
+    // .winnerName {
+    //     padding: 2.5px 5px;
+    //     border-width: 1px;
+    //     border-radius: 5px;
+
+    //     &.dark {
+    //         background-color: lighten($darkModeBgColor, 2.5%);
+    //     }
+    
+    //     &.light {
+    //         background-color: lighten($lightModeBgColor, 5%);
+    //     }
+    // }
+}
+
+.box {
+    &.dark {
+        background-color: darken($lightModeBgColor, 10%);
+    }
+
+    &.light {
+        background-color: lighten($lightModeBgColor, 10%);
+    }
+}

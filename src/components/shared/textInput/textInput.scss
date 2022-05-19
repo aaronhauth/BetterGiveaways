@@ -1,0 +1,30 @@
+@import '../shared.scss';
+
+
+.input {
+    
+    padding: 2.5px 5px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: transparent;
+    border-bottom: .3px solid;
+    transition: background-color .3s;
+
+
+
+
+    &:hover {
+        background-color: #7c7c7ca4;
+    }
+
+    &:focus {
+        border: none;
+        border-bottom: .3px solid black;
+        background-color: #7c7c7ca4;
+        color: white;
+        outline: none;
+        &::placeholder {
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import '../shared.scss';
+
+.button {
+    background-color:  $primaryBtnColor;
+    color: white;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    text-align: center;
+    user-select: none;
+
+    &:hover {
+        background-color:  $primaryBtnHoverColor;
+        cursor: pointer;
+    }
+
+    &.disabled {
+        cursor:not-allowed;
+        background-color: grayscale($primaryBtnColor);
+
+        &:hover {
+            background-color: grayscale($primaryBtnHoverColor);
+
+        }
+    }
+
+
+
+    &.animateIn {
+        animation-duration: .75s;
+        animation-timing-function: ease-out;
+        animation-name: bellyButtonReveal;
+        position: relative;
+        overflow-y: hidden;
+    }
+}
