@@ -39,10 +39,6 @@ module.exports = (_env,argv)=> {
       path:"./src/Mobile.js",
       outputHtml:"mobile.html",
       build:true
-    },
-    Backend: {
-      path: "./backend.ts",
-      build: true
     }
   }
 
@@ -81,10 +77,6 @@ module.exports = (_env,argv)=> {
           exclude: /(node_modules|bower_components)/,
           loader: 'babel-loader',
         },
-        { 
-          test: /\.tsx?$/, 
-          loader: 'awesome-typescript-loader'
-        },
         {
           test: /\.css$/,
           use: [ 'style-loader', 'css-loader' ]
@@ -106,7 +98,7 @@ module.exports = (_env,argv)=> {
         }
       ]
     },
-    resolve: { extensions: ['*', '.js', '.jsx', 'ts', 'tsx'] },
+    resolve: { extensions: ['*', '.js', '.jsx'] },
     output: {
       filename: "[name].bundle.js",
       path:bundlePath
