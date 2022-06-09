@@ -14,8 +14,6 @@
  *    limitations under the License.
  */
 
-// use this command -- node backend -c yx9mfmivn2ctwiaa3neka00fjmn8vt -s E30jPbbLAfHMRoYNZzK+7zUcKdWzVRIdttTQ442PFXw= -a jo2p6mzsa3u1vt1cdc5k9nibqh5dt1 -o 43658519 
-
 // batching and throttling extension messages
 // fix restarting giveaways
 
@@ -82,10 +80,10 @@ ext.
   option('-o, --owner-id <owner_id>', 'Extension owner ID').
   parse(process.argv);
 
-const ownerId = getOption('ownerId', 'EXT_OWNER_ID');
-const secret = Buffer.from(getOption('secret', 'EXT_SECRET'), 'base64');
-const clientId = getOption('clientId', 'EXT_CLIENT_ID');
-const token = getOption('appSecret', 'EXT_APP_SECRET')
+const ownerId = process.env.ownerId;
+const secret = Buffer.from(process.env.secret, 'base64');
+const clientId = process.env.clientId;
+const token = process.env.appSecret;
 let accessToken = '';
 
 const serverPathRoot = path.resolve(__dirname, '..', 'conf', 'server');

@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development",
+    "start": "node backend -c yx9mfmivn2ctwiaa3neka00fjmn8vt -s E30jPbbLAfHMRoYNZzK+7zUcKdWzVRIdttTQ442PFXw= -a jo2p6mzsa3u1vt1cdc5k9nibqh5dt1 -o 43658519",
+    "build-backend": "tsc",
+    "build-frontend": "webpack --mode production",
+    "start-frontend": "webpack-dev-server --mode development",
     "cert": "./bin/generate_cert.sh server",
     "host": "webpack-dev-server --mode development --devrig"
   },

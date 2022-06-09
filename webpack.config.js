@@ -39,6 +39,10 @@ module.exports = (_env,argv)=> {
       path:"./src/Mobile.js",
       outputHtml:"mobile.html",
       build:true
+    },
+    Backend: {
+      path: "./backend.ts",
+      build: true
     }
   }
 
