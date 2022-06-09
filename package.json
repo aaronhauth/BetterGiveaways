@@ -24,8 +24,8 @@
     "babel-loader": "^8.0.0",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^3.4.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^4.0.0-beta.11",
     "isomorphic-fetch": "^3.0.0",
@@ -44,13 +44,10 @@
     "core-js": "^3.5.0",
     "cors": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "rxjs": "^7.5.2",
     "sass": "^1.49.11"
-  },
-  "peerDependencies": {
-
   },
   "babel": {
     "presets": [

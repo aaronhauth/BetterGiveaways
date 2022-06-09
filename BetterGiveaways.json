@@ -189,7 +189,7 @@
     "whitelistedConfigUrls": [],
     "whitelistedPanelUrls": []
   },
-  "frontendCommand": "npm start",
+  "frontendCommand": "npm run start-frontend",
   "frontendFolderName": "public",
   "name": "BetterGiveaways",
   "usingRandomFrontendHostingPort": false,
