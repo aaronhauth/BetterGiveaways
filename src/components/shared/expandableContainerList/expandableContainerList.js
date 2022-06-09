@@ -30,8 +30,12 @@ export class ExpandableContainerList extends React.Component {
         return  <div>
                     {
                         React.Children.map(this.props.children, (child, i) => {
-                            const props = {...child.props};
-                            props.theme = this.props.theme;
+                            if (!child) {
+                                return null;
+                            }
+
+                            const props = {...child?.props};
+                            props.theme = this.props?.theme;
                             props.onClick = () => this.handleExpansionClick(i);
                             props.expanded = this.state.expandedItem === i;
                             return React.cloneElement(child, props)

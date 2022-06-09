@@ -77,6 +77,10 @@ module.exports = (_env,argv)=> {
           exclude: /(node_modules|bower_components)/,
           loader: 'babel-loader',
         },
+        { 
+          test: /\.tsx?$/, 
+          loader: 'awesome-typescript-loader'
+        },
         {
           test: /\.css$/,
           use: [ 'style-loader', 'css-loader' ]
@@ -98,7 +102,7 @@ module.exports = (_env,argv)=> {
         }
       ]
     },
-    resolve: { extensions: ['*', '.js', '.jsx'] },
+    resolve: { extensions: ['*', '.js', '.jsx', 'ts', 'tsx'] },
     output: {
       filename: "[name].bundle.js",
       path:bundlePath

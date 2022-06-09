@@ -94,6 +94,28 @@
       "orientation": "Portrait",
       "type": "panel",
       "viewerType": "Logged-In Viewer"
+    },
+    {
+      "channelId": "43658519",
+      "configurationAnchor": "panel",
+      "displayChannelName": "aaroniush",
+      "features": {
+        "isBitsEnabled": true,
+        "isChatEnabled": false,
+        "isSubscriptionStatusAvailable": false
+      },
+      "frameSize": {
+        "width": 1280,
+        "height": 720
+      },
+      "id": "6",
+      "isPopout": false,
+      "label": "",
+      "linked": true,
+      "linkedUserId": "728749477",
+      "orientation": "Portrait",
+      "type": "component",
+      "viewerType": "Logged-In Viewer"
     }
   ],
   "manifest": {

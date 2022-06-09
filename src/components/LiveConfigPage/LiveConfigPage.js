@@ -235,19 +235,21 @@ export default class LiveConfigPage extends React.Component{
 
                         }
 
-                        {!!this.state.winners?.length &&
-                            // only show winners if there are actual winners?
-                        }
+
 
 
                         <ExpandableContainerList  theme={this.state.theme}>
-                            <ExpandableContainer label="Winner(s)">
-                            {
-                                this.state.winners.map((winner, index) => {
-                                    return <div onClick={event => this.handleNameClick(event)} className={'winnerName ' + (this.state.theme === 'light' ? 'light' : 'dark')} key={index}>{winner.userName}</div>
-                                })
+
+                            {!!this.state.winners?.length &&
+                                // only show winners if there are actual winners?
+                                <ExpandableContainer label="Winner(s)">
+                                {
+                                    this.state.winners.map((winner, index) => {
+                                        return <div onClick={event => this.handleNameClick(event)} className={'winnerName ' + (this.state.theme === 'light' ? 'light' : 'dark')} key={index}>{winner.userName}</div>
+                                    })
+                                }
+                                </ExpandableContainer>
                             }
-                            </ExpandableContainer>
                             <ExpandableContainer label="Entries">
                                 {
                                     Object.entries(this.state.userList).map(([k, v]) => <div key={k}>{k}: {v}</div>)
