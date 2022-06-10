@@ -70,7 +70,7 @@ const STRINGS = {
 };
 
 ext.
-  version(require('./package.json').version).
+  version(require('../package.json').version).
   option('-s, --secret <secret>', 'Extension secret').
   option('-a, --app-secret <appSecret>', 'App Secret').
   option('-c, --client-id <client_id>', 'Extension client ID').

@@ -13,6 +13,9 @@
     "cert": "./bin/generate_cert.sh server",
     "host": "webpack-dev-server --mode development --devrig"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -39,8 +42,6 @@
   },
   "dependencies": {
     "axios": "^0.25.0",
-    "boom": "^7.3.0",
-    "color": "^4.2.0",
     "core-js": "^3.5.0",
     "cors": "^2.8.5",
     "jsonwebtoken": "^8.5.1",

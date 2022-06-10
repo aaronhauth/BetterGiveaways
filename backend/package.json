@@ -1,0 +1,27 @@
+{
+  "name": "react-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node backend -c yx9mfmivn2ctwiaa3neka00fjmn8vt -s E30jPbbLAfHMRoYNZzK+7zUcKdWzVRIdttTQ442PFXw= -a jo2p6mzsa3u1vt1cdc5k9nibqh5dt1 -o 43658519",
+    "start-frontend": "webpack-dev-server --mode development",
+    "cert": "./bin/generate_cert.sh server",
+    "host": "webpack-dev-server --mode development --devrig"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "boom": "^7.3.0",
+    "color": "^4.2.0",
+    "core-js": "^3.5.0",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
