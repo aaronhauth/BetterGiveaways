@@ -358,7 +358,7 @@ const giveaways = [];
     res.send(JSON.stringify(giveaways[giveawayId]));
   })
 
-  app.listen(port, () => {
+  app.listen(process.env.PORT || 8081, () => {
     console.log(`listening on port ${port}`);
   })
 
