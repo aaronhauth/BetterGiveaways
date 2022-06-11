@@ -17,10 +17,10 @@
 // batching and throttling extension messages
 // fix restarting giveaways
 
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 const Boom = require('boom');
-const color = require('color');
+// const color = require('color');
 const jsonwebtoken = require('jsonwebtoken');
 const axios = require('axios');
 
@@ -75,14 +75,14 @@ const clientId = process.env.clientId;
 const token = process.env.appSecret;
 let accessToken = '';
 
-const serverPathRoot = path.resolve(__dirname, '..', 'conf', 'server');
-if (fs.existsSync(serverPathRoot + '.crt') && fs.existsSync(serverPathRoot + '.key')) {
-  // serverOptions.tls = {
-  //   // If you need a certificate, execute "npm run cert".
-  //   cert: fs.readFileSync(serverPathRoot + '.crt'),
-  //   key: fs.readFileSync(serverPathRoot + '.key'),
-  // };
-}
+// const serverPathRoot = path.resolve(__dirname, '..', 'conf', 'server');
+// if (fs.existsSync(serverPathRoot + '.crt') && fs.existsSync(serverPathRoot + '.key')) {
+//   // serverOptions.tls = {
+//   //   // If you need a certificate, execute "npm run cert".
+//   //   cert: fs.readFileSync(serverPathRoot + '.crt'),
+//   //   key: fs.readFileSync(serverPathRoot + '.key'),
+//   // };
+// }
 
 /**
  * TODO: store past giveaways in twitch configuration settings.
