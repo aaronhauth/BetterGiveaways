@@ -21,7 +21,6 @@ const fs = require('fs');
 const path = require('path');
 const Boom = require('boom');
 const color = require('color');
-const ext = require('commander');
 const jsonwebtoken = require('jsonwebtoken');
 const axios = require('axios');
 
@@ -69,13 +68,6 @@ const STRINGS = {
   invalidJwt: 'Invalid JWT',
 };
 
-ext.
-  version(require('../package.json').version).
-  option('-s, --secret <secret>', 'Extension secret').
-  option('-a, --app-secret <appSecret>', 'App Secret').
-  option('-c, --client-id <client_id>', 'Extension client ID').
-  option('-o, --owner-id <owner_id>', 'Extension owner ID').
-  parse(process.argv);
 
 const ownerId = process.env.ownerId;
 const secret = Buffer.from(process.env.secret, 'base64');
@@ -399,22 +391,6 @@ function usingValue(name) {
 function missingValue(name, variable) {
   const option = name.charAt(0);
   return `Extension ${name} required.\nUse argument "-${option} <${name}>" or environment variable "${variable}".`;
-}
-
-// Get options from the command line or the environment.
-function getOption(optionName, environmentName) {
-  const option = (() => {
-    if (ext[optionName]) {
-      return ext[optionName];
-    } else if (process.env[environmentName]) {
-      verboseLog(STRINGS[optionName + 'Env']);
-      return process.env[environmentName];
-    }
-    verboseLog(STRINGS[optionName + 'Missing']);
-    process.exit(1);
-  })();
-  console.log(`Using "${option}" for ${optionName}`);
-  return option;
 }
 
 // Verify the header and the enclosed JWT.
