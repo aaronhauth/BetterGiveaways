@@ -70,7 +70,7 @@ const STRINGS = {
 
 
 const ownerId = process.env.ownerId;
-const secret = Buffer.from(process.env.secret, 'base64');
+const secret = process.env.secret
 const clientId = process.env.clientId;
 const token = process.env.appSecret;
 let accessToken = '';
