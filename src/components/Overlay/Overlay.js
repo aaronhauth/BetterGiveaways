@@ -6,8 +6,8 @@ import { WinnerComponent } from '../shared/winner';
 import './Overlay.scss'
 
 export default class App extends React.Component{
-    baseUrl = 'http://localhost:5000/giveaway';
-    // baseUrl = 'https://better-giveaways.herokuapp.com/giveaway';
+    // baseUrl = 'http://localhost:5000/giveaway';
+    baseUrl = 'https://better-giveaways.herokuapp.com/giveaway';
 
     constructor(props){
         super(props)
