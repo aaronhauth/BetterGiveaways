@@ -1,0 +1,9 @@
+@use '../shared/shared.scss';
+
+.videoOverlay {
+    position: fixed;
+    bottom: 5rem;
+    right: 7rem;
+    width: 20rem;
+    height: 12rem;
+}

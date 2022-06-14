@@ -1,12 +1,9 @@
 import React from 'react'
 import Authentication from '../../util/Authentication/Authentication'
 import { ButtonComponent } from '../shared/Button/Button';
-import {ExpandableContainer} from '../shared/expandableContainer/expandableContainer'; 
-import { ExpandableContainerList } from '../shared/expandableContainerList/expandableContainerList';
 import { WinnerComponent } from '../shared/winner';
-import { useLocation } from 'react-router-dom';
 
-import './App.scss'
+import './Overlay.scss'
 
 export default class App extends React.Component{
     baseUrl = 'http://localhost:5000/giveaway';
@@ -191,15 +188,11 @@ export default class App extends React.Component{
 
 
         if(this.state.finishedLoading && this.state.isVisible){
-            
-            const containerClasses = [];
-            containerClasses.push(this.state.theme === 'light' ? 'light' : 'dark');
-
             return (
-                <div className={`container ${containerClasses.join(' ')}`}>
+                <div className={'container videoOverlay'}>
                     {giveaway.giveawayActive && 
                         <div>
-                            <ButtonComponent disabled={preventFurtherEntries || this.state.isJoining} onClick={() => this.joinGiveaway()}>
+                            <ButtonComponent animateIn='true' disabled={preventFurtherEntries || this.state.isJoining} onClick={() => this.joinGiveaway()}>
                                 { (!preventFurtherEntries && !this.state.isJoining) &&
                                     <span>Join Giveaway</span>
                                 }
@@ -223,7 +216,6 @@ export default class App extends React.Component{
                             }
                         </div>
                     }
-                    {!giveaway.giveawayActive && <div>No Giveaways at the moment...</div>}
                     <WinnerComponent theme={this.state.theme} winners={giveaway.winners} />
 
                 </div>

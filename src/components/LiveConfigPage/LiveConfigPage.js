@@ -8,8 +8,9 @@ import { ExpandableContainer } from '../shared/expandableContainer/expandableCon
 import { ExpandableContainerList } from '../shared/expandableContainerList/expandableContainerList';
 
 export default class LiveConfigPage extends React.Component{
-    baseUrl = 'http://localhost:8081/giveaway';
-
+    
+    baseUrl = 'http://localhost:5000/giveaway';
+    // baseUrl = 'https://better-giveaways.herokuapp.com/giveaway';
     constructor(props) {
         super(props)
         this.Authentication = new Authentication()

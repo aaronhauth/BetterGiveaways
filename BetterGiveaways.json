@@ -34,28 +34,6 @@
       "configurationAnchor": "panel",
       "displayChannelName": "aaroniush",
       "features": {
-        "isBitsEnabled": false,
-        "isChatEnabled": false,
-        "isSubscriptionStatusAvailable": false
-      },
-      "frameSize": {
-        "width": 1280,
-        "height": 720
-      },
-      "id": "3",
-      "isPopout": false,
-      "label": "Broadcaster Channel",
-      "linked": true,
-      "linkedUserId": "265737932",
-      "orientation": "Portrait",
-      "type": "dashboard",
-      "viewerType": "Broadcaster"
-    },
-    {
-      "channelId": "43658519",
-      "configurationAnchor": "panel",
-      "displayChannelName": "aaroniush",
-      "features": {
         "isBitsEnabled": true,
         "isChatEnabled": false,
         "isSubscriptionStatusAvailable": false
@@ -64,7 +42,7 @@
         "width": 1280,
         "height": 720
       },
-      "id": "4",
+      "id": "1",
       "isPopout": false,
       "label": "",
       "linked": false,
@@ -86,14 +64,14 @@
         "width": 1280,
         "height": 720
       },
-      "id": "5",
+      "id": "2",
       "isPopout": false,
       "label": "",
       "linked": true,
-      "linkedUserId": "728749477",
+      "linkedUserId": "265737932",
       "orientation": "Portrait",
-      "type": "panel",
-      "viewerType": "Logged-In Viewer"
+      "type": "dashboard",
+      "viewerType": "Broadcaster"
     },
     {
       "channelId": "43658519",
@@ -108,13 +86,13 @@
         "width": 1280,
         "height": 720
       },
-      "id": "6",
+      "id": "3",
       "isPopout": false,
       "label": "",
       "linked": true,
       "linkedUserId": "728749477",
       "orientation": "Portrait",
-      "type": "component",
+      "type": "video_overlay",
       "viewerType": "Logged-In Viewer"
     }
   ],
@@ -152,6 +130,7 @@
     "viewerUrls": {
       "mobile": "https://localhost:8080/mobile.html",
       "panel": "https://localhost:8080/panel.html",
+      "videoOverlay": "https://localhost:8080/video_overlay.html",
       "component": "https://localhost:8080/video_component.html"
     },
     "views": {
@@ -161,6 +140,10 @@
       "panel": {
         "viewerUrl": "https://localhost:8080/panel.html",
         "height": 200,
+        "canLinkExternalContent": false
+      },
+      "videoOverlay": {
+        "viewerUrl": "https://localhost:8080/video_overlay.html",
         "canLinkExternalContent": false
       },
       "component": {
@@ -189,7 +172,7 @@
     "whitelistedConfigUrls": [],
     "whitelistedPanelUrls": []
   },
-  "frontendCommand": "npm run start-frontend",
+  "frontendCommand": "npm run  start-frontend",
   "frontendFolderName": "public",
   "name": "BetterGiveaways",
   "usingRandomFrontendHostingPort": false,

@@ -23,11 +23,10 @@ const Boom = require('boom');
 // const color = require('color');
 const jsonwebtoken = require('jsonwebtoken');
 const axios = require('axios');
-
 const express = require('express');
 var cors = require('cors')
 const app = express();
-const port = 8081;
+const port = process.env.PORT || 8081;
 app.use(cors());
 app.use(express.json());
 
@@ -69,10 +68,10 @@ const STRINGS = {
 };
 
 
-const ownerId = process.env.ownerId;
-const secret = process.env.secret
-const clientId = process.env.clientId;
-const token = process.env.appSecret;
+const ownerId = process.env.ownerId.trim();
+const secret = Buffer.from(process.env.extSecret, 'base64');
+const clientId = process.env.clientId.trim();
+const appSecret = process.env.appSecret.trim();
 let accessToken = '';
 
 // const serverPathRoot = path.resolve(__dirname, '..', 'conf', 'server');
@@ -358,7 +357,7 @@ const giveaways = [];
     res.send(JSON.stringify(giveaways[giveawayId]));
   })
 
-  app.listen(process.env.PORT || 8081, () => {
+  app.listen(port, () => {
     console.log(`listening on port ${port}`);
   })
 
@@ -495,7 +494,7 @@ function makeHelixServerToken(channelId ,pubSubPerm) {
 
 function getServerAccessToken() {
   console.log(secret.toString());
-  return axios.post(`https://id.twitch.tv/oauth2/token?client_id=${clientId}&client_secret=${token}&grant_type=client_credentials`)
+  return axios.post(`https://id.twitch.tv/oauth2/token?client_id=${clientId}&client_secret=${appSecret}&grant_type=client_credentials`)
 }
 
 const cachedUsers = {};
