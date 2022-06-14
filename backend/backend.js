@@ -392,7 +392,6 @@ function missingValue(name, variable) {
   return `Extension ${name} required.\nUse argument "-${option} <${name}>" or environment variable "${variable}".`;
 }
 
-// Verify the header and the enclosed JWT.
 function verifyAndDecode(header) {
   if (header.startsWith(bearerPrefix)) {
     try {
