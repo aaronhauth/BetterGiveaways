@@ -7,3 +7,22 @@
     width: 20rem;
     height: 12rem;
 }
+
+.popup {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 1.2rem;
+    border-style: solid;
+    border-color: #a76cff;
+    filter: drop-shadow(2px 5px 12px black);
+
+    &.animateIn {
+        animation-duration: .75s;
+        animation-timing-function: ease-out;
+        animation-name: bellyButtonReveal;
+        position: relative;
+        overflow-y: hidden;
+    }
+}
+
+

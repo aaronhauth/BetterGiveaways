@@ -6,8 +6,8 @@ import { WinnerComponent } from '../shared/winner';
 import './Overlay.scss'
 
 export default class App extends React.Component{
-    // baseUrl = 'http://localhost:5000/giveaway';
-    baseUrl = 'https://better-giveaways.herokuapp.com/giveaway';
+    baseUrl = 'http://localhost:5000/giveaway';
+    // baseUrl = 'https://better-giveaways.herokuapp.com/giveaway';
 
     constructor(props){
         super(props)
@@ -191,8 +191,8 @@ export default class App extends React.Component{
             return (
                 <div className={'container videoOverlay'}>
                     {giveaway.giveawayActive && 
-                        <div>
-                            <ButtonComponent animateIn='true' disabled={preventFurtherEntries || this.state.isJoining} onClick={() => this.joinGiveaway()}>
+                        <div className='popup animateIn'>
+                            <ButtonComponent animateIn={false} disabled={preventFurtherEntries || this.state.isJoining} onClick={() => this.joinGiveaway()}>
                                 { (!preventFurtherEntries && !this.state.isJoining) &&
                                     <span>Join Giveaway</span>
                                 }
@@ -206,24 +206,19 @@ export default class App extends React.Component{
                                 }
                             </ButtonComponent>
                             {this.state.giveaway.inGiveaway && <div>
-                                You're in a giveaway! 
-                                <div>Times you entered: {giveaway.numberOfEntries}</div>
+
+                                <div>You've entered {giveaway.numberOfEntries} time(s).</div>
                             </div>}
                             {!!giveaway.totalEntries && 
                                 <div>
                                     Total entries in giveaway: {giveaway.totalEntries}.
                                 </div>
                             }
-                        </div>
-                    }
                     <WinnerComponent theme={this.state.theme} winners={giveaway.winners} />
 
-                </div>
-            )
-        }else{
-            return (
-                <div className="App">
-                    No active giveaways.
+                        </div>
+                    }
+
                 </div>
             )
         }
